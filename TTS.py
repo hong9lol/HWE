@@ -50,7 +50,7 @@ for idx, input_text in enumerate(input_text_list):
     # voice parameters and audio file type
     response = client.synthesize_speech(synthesis_input, voice, audio_config)
     # The response's audio_content is binary.
-    with open(PREFIX_PATH + "mp3/" + sys.argv[1] + "_output" + str(idx+1) + ".mp3", 'wb') as out:
+    with open(PREFIX_PATH + "mp3/Output_TTS/" + sys.argv[1] + "_output" + str(idx+1) + ".mp3", 'wb') as out:
         # Write the response to the output file.
         out.write(response.audio_content)
         print("Complete extract mp3 files(", idx +

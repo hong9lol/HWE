@@ -28,9 +28,11 @@ for i in range(0, int(sys.argv[3])):
     for _ in range(0, int(sys.argv[4])):
         f.write("file \'" + PREFIX_PATH + sys.argv[1] + "/" + sys.argv[2] +
                 "/" + sys.argv[1] + sys.argv[2] + "_output" + str(i + 1) + ".mp3\'\n")
+        f.write("file \'" + PREFIX_PATH + "one_and_half_sec_empty.mp3\'\n")
+    f.write("file \'" + PREFIX_PATH + "one_and_half_sec_empty.mp3\'\n")
 
 f.close()
-print("ffmpeg -f concat -safe 0 -i ./" + JOIN_FILE_LIST_PATH + " -c copy " + PREFIX_PATH + sys.argv[1] + "/" + sys.argv[2] +
-      "/" + sys.argv[1] + sys.argv[2] + ".mp3")
-os.system("ffmpeg -f concat -safe 0 -i ./" + JOIN_FILE_LIST_PATH + " -c copy " + PREFIX_PATH + sys.argv[1] + "/" + sys.argv[2] +
-          "/" + sys.argv[1] + sys.argv[2] + ".mp3")
+print("ffmpeg -f concat -safe 0 -i ./" + JOIN_FILE_LIST_PATH +
+      " -c copy " + PREFIX_PATH + "Output_Join/" + sys.argv[1] + sys.argv[2] + ".mp3")
+os.system("ffmpeg -f concat -safe 0 -i ./" + JOIN_FILE_LIST_PATH +
+          " -c copy " + PREFIX_PATH + "Output_Join/" + sys.argv[1] + sys.argv[2] + ".mp3")
