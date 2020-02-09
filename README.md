@@ -1,4 +1,4 @@
-### How to use - This is only for me
+### How to use - This project is only for me
 
 - Run pipenv in the opic folder
 - Make a script file like a data in data folder
